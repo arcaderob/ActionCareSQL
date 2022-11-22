@@ -1,7 +1,15 @@
--- Database export via SQLPro (https://www.sqlprostudio.com/allapps.html)
+-- Database export via SQLPro (/allapps.html)
 -- Exported by robgill at 21-11-2022 19:11.
 -- WARNING: This file may contain descructive statements such as DROPs.
 -- Please ensure that you are running the script at the proper location.
+
+-- BEGIN TABLE subscriptions
+DROP TABLE IF EXISTS subscriptions;
+CREATE TABLE `subscriptions` (
+  `patientEmail` varchar(50) NOT NULL,
+  `subscriberEmail` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+-- END TABLE subscriptions
 
 
 -- BEGIN TABLE tasks
@@ -14,7 +22,7 @@ CREATE TABLE `tasks` (
   `task` varchar(50) NOT NULL,
   `completed` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- Inserting 3 rows into tasks
 -- Insert batch #1
