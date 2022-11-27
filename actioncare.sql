@@ -21,8 +21,9 @@ CREATE TABLE `tasks` (
   `daily` bit(1) NOT NULL,
   `task` varchar(50) NOT NULL,
   `completed` varchar(50) DEFAULT NULL,
+  `notification_sent` bit(1) NOT NULL DEFAULT b'0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Inserting 3 rows into tasks
 -- Insert batch #1
